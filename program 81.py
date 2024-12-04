@@ -13,3 +13,7 @@ def caesar_decipher(ciphertext, shift):
 # Decrypt the ciphertext
 ciphertext = "YMJ VZNY FSI VZNY NX BJFR UWTLWJQFYD."
 print(caesar_decipher(ciphertext, 5))
+
+def cipher_chipher():
+    user_input = input("Enter the text to decode: ")
+    
