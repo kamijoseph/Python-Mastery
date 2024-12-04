@@ -46,9 +46,17 @@ def coin_flip():
 def die():
     die_outcomes = [1,2,3,4,5,6]
     die_flip = random.choice(die_outcomes)
-    num_of_die = input("Do you want to flip one or to dies?: ")
     
-    
+    while True:
+        
+        num_of_die = int(input("Do you want to flip 1 or 2 dies?: "))
+        if (0 < num_of_die < 3 ):
+            print('bot')
+        else:
+            print("Invalid number of dies!")
+        return num_of_die
+
+ 
 def game_play():
     choice = input("\nHow would you like to leave your life to chance: ").upper()
     
