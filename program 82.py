@@ -5,8 +5,9 @@
 
 def add_sprinkles(func):
     def wrapper():
-        return func()
-    return wrapper()
+        print("*Add your sprinkles friend.*")
+        func()
+    return wrapper
 
 @add_sprinkles        
 def get_ice_cream():
