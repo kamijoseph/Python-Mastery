@@ -41,3 +41,12 @@ class Screen:
             print(f"{num_tickets} tickets booked successfully for {self.movie.title} on Screen {self.screen_number}.")
         else:
             print("Not enough seats available.")
+            
+    def display_tickets(self):
+        print(f"Tickets for screen {self.screen_number}: ")
+        for ticket in self.tickets:
+            print(ticket)
+            
+    def __str__(self):
+        movie_info = self.movie if self.movie else "No Movie Assigned"
+        return f"Screen {self.screen_number}: {movie_info}, Seats booked: {self.booked_seats}/{self.capacity}"
