@@ -1,13 +1,3 @@
-
-# object oriented programming learning
-
-#objectives
-# create a class(blueprint)
-# class attributes
-# create an instance
-# instance attributes: defined in the __init__(self) function
-
-#class
 class SoftwareEngineer:
     
     #class attribute
@@ -20,6 +10,12 @@ class SoftwareEngineer:
         self.level = level
         self.salary = salary
 
+    #Instance Method
+    def code(self):
+        pass
+
 #instance of the class
 se1 = SoftwareEngineer('mark', 30, 'juniour', 5000)
 print(se1.name)
+se2 = SoftwareEngineer("Kami", 40, "Senior", 10000)
+print(se2)
