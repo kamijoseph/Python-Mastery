@@ -21,5 +21,12 @@ class Ticket:
     
 # Screens Class
 class Screen:
-    def __init__(self):
-        pass
+    def __init__(self, screen_number, capacity):
+        self.screen_number = screen_number
+        self.capacity = capacity
+        self.booked_seats = 0
+        self.movie = None
+        self.tickets = []
+        
+    def assign_movie(self, movie):
+        self.movie = movie
