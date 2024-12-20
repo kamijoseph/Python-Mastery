@@ -1,4 +1,6 @@
 
+# A Simple Movie Theatre Management System
+
 # Movie Class
 class Movie:
     def __init__(self, title, duration, genre):
