@@ -50,3 +50,24 @@ class Screen:
     def __str__(self):
         movie_info = self.movie if self.movie else "No Movie Assigned"
         return f"Screen {self.screen_number}: {movie_info}, Seats booked: {self.booked_seats}/{self.capacity}"
+    
+# Movie Theatre Class
+class MovieTheatre:
+    def __init__(self, name):
+        self.name = name
+        self.screens = []
+        
+    def add_screen(self, screen):
+        self.screens.append(screen)
+        
+    def show_movies(self):
+        print(f"Movies currently playing at {self.name}: ")
+        for screen in self.screens:
+            print(screen)
+            
+    def find_screen(self, screen_number):
+        for screen in self.screen:
+            if screen == self.screen_number:
+                return screen
+        print("Screen Not Found!")
+        return None
