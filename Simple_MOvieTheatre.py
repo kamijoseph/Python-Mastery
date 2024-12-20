@@ -8,3 +8,18 @@ class Movie:
         
     def __str__(self):
         return f"{self.title}, ({self.genre}, {self.duration} minutes)"
+    
+# Ticket Class
+class Ticket:
+    def __init__(self, movie_title, screen_number, seat_number):
+        self.movie_title = movie_title
+        self.screen_number = screen_number
+        self.seat_number = seat_number
+        
+    def __str__(self):
+        return f"Movie: {self.movie_title}, Screen: {self.screen_number}, seat: {self.seat_number}"
+    
+# Screens Class
+class Screen:
+    def __init__(self):
+        pass
