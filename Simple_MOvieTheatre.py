@@ -30,3 +30,14 @@ class Screen:
         
     def assign_movie(self, movie):
         self.movie = movie
+        
+    def book_ticket(self, num_tickets):
+        if self.booked_seats + num_tickets <= self.capacity:
+            for i in range(1, num_tickets + 1):
+                seat_number = self.booked_seats + i
+                ticket = Ticket(self.movie.title, self.screen_number, seat_number)
+                self.tickets.append(ticket)
+            self.booked_seats += num_tickets
+            print(f"{num_tickets} tickets booked successfully for {self.movie.title} on Screen {self.screen_number}.")
+        else:
+            print("Not enough seats available.")
