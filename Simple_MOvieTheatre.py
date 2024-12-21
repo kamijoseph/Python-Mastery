@@ -75,3 +75,16 @@ class MovieTheatre:
         return None
     
 # Application Usage
+if __name__ == "__main__":
+    
+    #Create Theatre
+    theatre = MovieTheatre("IMAX Studios")
+    
+    #Create Some Movies
+    movie1 = Movie("The Boys", 136, "Fantasy fiction")
+    movie2 = Movie("Home Alone", 145, "Drama")
+    movie3 = Movie("Shadow Hunters", 300, "Fantasy fiction")
+    movie4 = Movie("50 Shades Black", 203, "Sex Romance")
+    movie5 = Movie("Rick And Morty", 480, "Sci-Fi Adventure")
+    
+    #Create Some Screen and Assign Movies
