@@ -1,6 +1,3 @@
 
-# Library management system.
-
-print ("Welcome to the Fate Library")
-name = input("What is your name?: ")
-
+# Library management sys
+print("This is The Fate's Algorithm Library")

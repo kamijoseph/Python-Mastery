@@ -1,5 +1,6 @@
 
-# Implementing linked linked lists
+# Implementing a linked list
+# Check out more of Linked list on the my_dsa_notes repo
 
 class Node:
     
