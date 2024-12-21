@@ -27,5 +27,3 @@ while running:
         calculate()
     else:
         running = False
-    
-   
