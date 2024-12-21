@@ -98,4 +98,10 @@ if __name__ == "__main__":
     screen4.assign_movie(movie4)
     screen5 = Screen(5, 100)
     screen5.assign_movie(movie5)
-  
+
+    #Add screen to the theatre
+    theatre.add_screen(screen1)
+    theatre.add_screen(screen2)
+    theatre.add_screen(screen3)
+    theatre.add_screen(screen4)
+    theatre.add_screen(screen5)
