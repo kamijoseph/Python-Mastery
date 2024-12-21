@@ -88,3 +88,14 @@ if __name__ == "__main__":
     movie5 = Movie("Rick And Morty", 480, "Sci-Fi Adventure")
     
     #Create Some Screen and Assign Movies
+    screen1 = Screen(1, 100)
+    screen1.assign_movie(movie1)
+    screen2 = Screen(2, 100)
+    screen2.assign_movie(movie2)
+    screen3 = Screen(3, 100)
+    screen3.assign_movie(movie3)
+    screen4 = Screen(4, 100)
+    screen4.assign_movie(movie4)
+    screen5 = Screen(5, 100)
+    screen5.assign_movie(movie5)
+  
