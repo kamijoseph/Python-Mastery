@@ -105,3 +105,13 @@ if __name__ == "__main__":
     theatre.add_screen(screen3)
     theatre.add_screen(screen4)
     theatre.add_screen(screen5)
+    
+    #Display all movies
+    theatre.show_movies()
+    
+    #Book Tickets
+    screen1.book_ticket(5)
+    screen2.book_ticket(34)
+    screen3.book_ticket(40)
+    screen4.book_ticket(11)
+    screen5.book_ticket(8)
