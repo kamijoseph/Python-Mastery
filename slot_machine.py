@@ -1,5 +1,5 @@
 
-# The Betting Project
+# The Slot Machine Betting Project
 
 import random
 
