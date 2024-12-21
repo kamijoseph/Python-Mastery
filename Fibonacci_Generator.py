@@ -1,6 +1,5 @@
 
 # Generating a fibonacci sequence
-
 def fibonacci(n):
     sequence = []
     a, b = 0, 1
