@@ -40,4 +40,3 @@ numbers = [14,15,18,20,13,17,19,20]
 print(mean(numbers))
 print(mode(numbers))
 print(median(numbers))
-
