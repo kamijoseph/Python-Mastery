@@ -115,3 +115,13 @@ if __name__ == "__main__":
     screen3.book_ticket(40)
     screen4.book_ticket(11)
     screen5.book_ticket(8)
+    
+    #Show Tickets
+    screen1.display_tickets()
+    screen2.display_tickets()
+    screen3.display_tickets()
+    screen4.display_tickets()
+    screen5.display_tickets()
+    
+    #Show Updated Movies
+    theatre.show_movies()
