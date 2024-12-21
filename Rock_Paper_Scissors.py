@@ -3,7 +3,7 @@
 import random
 
 while True:
-    choices = ["rock", "paper", "scissors"]
+    choices = ["rock", "paper", "scissors"] 
     player = None
     computer = random.choice(choices)
 
