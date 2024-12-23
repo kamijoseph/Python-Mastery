@@ -81,3 +81,12 @@ class Library:
         member.return_book(book)
         self.books.append(book)       
         print(f"{book.title} has been returned by {member.name}")  
+        
+    def display_books(self):
+        if not self.books:
+            print("No books Available!")
+        else:
+            print(f"Books Available in {self.name}: ")
+            for book in self.books:
+                print(book)
+            
