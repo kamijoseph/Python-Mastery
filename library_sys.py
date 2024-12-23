@@ -30,3 +30,23 @@ class Member:
     def __str__(self):
         borrowed = ', '.join([book.title for book in self.borrowed_books]) if self.borrowed_books else "No books borrowed"
         return f"Member: {self.name} (ID: {self.member_id}) Borrowed books: {borrowed}"
+    
+# Library class
+class Library:
+    def __init__(self, name):
+        self.name = name
+        self.books = []
+        self.members = []
+        
+    def add_book(self, book):
+        self.books.append(book)
+        
+    def remove_book(self, isbn):
+        for book in self.books:
+            if self.isbn == isbn:
+                self.books.remove(book)
+                return True
+        return False
+    
+    def register_member(self, member):
+        self.members.append(member)
