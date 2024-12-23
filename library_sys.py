@@ -89,3 +89,22 @@ class Library:
             print(f"Books Available in {self.name}: ")
             for book in self.books:
                 print(book)
+
+# Application Example
+
+#Library
+library = Library("Mcmillan Library Nairobi")
+
+#Adding Books To The Library
+book1 = Book("Sapiens: A Brief History Of Mankind", "Yuval Noah Harrari", "History", "13456789")
+book2 = Book("Animal Farm", "George Orwell", "Fiction", "44456789")
+book3 = Book("1984", "George Orwell", "Dystopia", "55456789")
+book4 = Book("To Kill a MockingBird", "Harper Lee", "Fiction", "66456789")
+book5 = Book("48 Laws of Power", "Robert-Greene", "No Idea", "77456789")
+library.add_book(book1)
+library.add_book(book2)
+library.add_book(book3)
+library.add_book(book4)
+library.add_book(book5)
+
+#
