@@ -107,4 +107,14 @@ library.add_book(book3)
 library.add_book(book4)
 library.add_book(book5)
 
-#
+#Register Members
+member1 = Member("Kami", 1)
+member2 = Member("Joseph", 1)
+member3 = Member("Kiarie", 1)
+member4 = Member("Alice", 1)
+member5 = Member("Vivian", 1)
+library.register_member(member1)
+library.register_member(member2)
+library.register_member(member3)
+library.register_member(member4)
+library.register_member(member5)
