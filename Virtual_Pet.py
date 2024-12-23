@@ -1,5 +1,6 @@
 
 #----------Virtual Pet Game----------
+import time
 
 # VirtualPetClass
 class VirtualPet:
@@ -49,3 +50,35 @@ class VirtualPet:
             print(f"{self.name} is too unhappy. {self.name} has run over. Game Over")
             return False
         return True
+
+def main():
+    print("Welcome to the Virtual Pet Game.")
+    pet_name = input("Enter the name of your Pet: ")
+    pet = VirtualPet(pet_name)
+    
+    while pet.is_alive():
+        pet.status
+        print("What would you like to do?")
+        print("1. Feed")
+        print("2. Play")
+        print("3. Rest")
+        print("4. Do nothing")
+        
+        choice = input("Enter Your choice (1-4): ")
+        if choice == "1":
+            pet.feed()
+        elif choice == "2":
+            pet.play()
+        elif choice == "3":
+            pet.rest()
+        elif choice == "4":
+            print(f"{pet.name} waits patiently........")
+            pet.hunger += 5
+            pet.happiness -= 5
+        else:
+            print("Invalid choice. Please try again.")
+        time.sleep(2)
+    print("Thank You for playing.")
+
+if __name__ == "__main__":
+    main()
