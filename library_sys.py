@@ -50,3 +50,19 @@ class Library:
     
     def register_member(self, member):
         self.members.append(member)
+        
+    def lend_book(self, isbn, member_id):
+        member = next((m for m in self.members if m.member_id == member_id), None)
+        book = next((b for b in self.books if b.isbn == isbn ), None)
+        
+        if not member:
+            print("Member Not Found")
+            return
+        
+        if not book:
+            print("Book Not Found or Unavailable")
+            return
+        
+        member.borrow_book(book)
+        self.books.remove(book)
+        print(f"{book.title} has been lent to {member.name}.")
