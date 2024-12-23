@@ -66,3 +66,18 @@ class Library:
         member.borrow_book(book)
         self.books.remove(book)
         print(f"{book.title} has been lent to {member.name}.")
+        
+    def return_book(self, isbn, member_id):
+        member = next((m for m in self.members if m.member_id == member_id), None)
+        if not member:
+            print("Member Not Found!")
+            return
+        
+        book = next((b for b in self.books if b.isbn == isbn), None)
+        if not book:
+            print("Book Not Found or Unavailable!")
+            return
+            
+        member.return_book(book)
+        self.books.append(book)       
+        print(f"{book.title} has been returned by {member.name}")  
