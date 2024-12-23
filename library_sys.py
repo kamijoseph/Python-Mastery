@@ -98,41 +98,41 @@ class Library:
                 print(member)
 
 # Application Example
+if __name__ == "__main__":
+    #Library
+    library = Library("Fate Algorithm Library")
 
-#Library
-library = Library("Fate Algorithm Library")
+    #Adding Books To The Library
+    book1 = Book("Sapiens: A Brief History Of Mankind", "Yuval Noah Harrari", "History", "13456789")
+    book2 = Book("Animal Farm", "George Orwell", "Fiction", "44456789")
+    book3 = Book("1984", "George Orwell", "Dystopia", "55456789")
+    book4 = Book("To Kill a MockingBird", "Harper Lee", "Fiction", "66456789")
+    book5 = Book("48 Laws of Power", "Robert-Greene", "No Idea", "77456789")
+    library.add_book(book1)
+    library.add_book(book2)
+    library.add_book(book3)
+    library.add_book(book4)
+    library.add_book(book5)
 
-#Adding Books To The Library
-book1 = Book("Sapiens: A Brief History Of Mankind", "Yuval Noah Harrari", "History", "13456789")
-book2 = Book("Animal Farm", "George Orwell", "Fiction", "44456789")
-book3 = Book("1984", "George Orwell", "Dystopia", "55456789")
-book4 = Book("To Kill a MockingBird", "Harper Lee", "Fiction", "66456789")
-book5 = Book("48 Laws of Power", "Robert-Greene", "No Idea", "77456789")
-library.add_book(book1)
-library.add_book(book2)
-library.add_book(book3)
-library.add_book(book4)
-library.add_book(book5)
+    #Register Members
+    member1 = Member("Kami", 1)
+    member2 = Member("Joseph", 1)
+    member3 = Member("Kiarie", 1)
+    member4 = Member("Alice", 1)
+    member5 = Member("Vivian", 1)
+    library.register_member(member1)
+    library.register_member(member2)
+    library.register_member(member3)
+    library.register_member(member4)
+    library.register_member(member5)
 
-#Register Members
-member1 = Member("Kami", 1)
-member2 = Member("Joseph", 1)
-member3 = Member("Kiarie", 1)
-member4 = Member("Alice", 1)
-member5 = Member("Vivian", 1)
-library.register_member(member1)
-library.register_member(member2)
-library.register_member(member3)
-library.register_member(member4)
-library.register_member(member5)
+    #Display All Members and Books
+    library.display_books()
+    library.display_members()
 
-#Display All Members and Books
-library.display_books()
-library.display_members()
-
-# Lend and return books
-library.lend_book("13456789", 1)
-library.display_books()
-library.return_book("55456789", 1)
-library.display_books()
-library.display_members()
+    # Lend and return books
+    library.lend_book("13456789", 1)
+    library.display_books()
+    library.return_book("55456789", 1)
+    library.display_books()
+    library.display_members()
