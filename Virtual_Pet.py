@@ -1,5 +1,6 @@
 
 #----------Virtual Pet Game----------
+# Hi my Pets name is Known as Kitler. Its a beautiful and fluffy black Cat. Leave a star for him
 import time
 
 # VirtualPetClass
