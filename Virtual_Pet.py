@@ -40,3 +40,12 @@ class VirtualPet:
         print(f"Energy: {self.energy}/100")
         print(f"Happiness: {self.happiness}/100")
         print("------------------------------------------------\n")
+        
+    def is_alive(self):
+        if self.hunger >= 100:
+            print(f"{self.name} has starved to death. Game Over!")
+            return False
+        if self.happiness >= 100:
+            print(f"{self.name} is too unhappy. {self.name} has run over. Game Over")
+            return False
+        return True
