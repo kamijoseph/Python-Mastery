@@ -89,6 +89,14 @@ class Library:
             print(f"Books Available in {self.name}: ")
             for book in self.books:
                 print(book)
+                
+    def display_members(self):
+        if not self.members:
+            print("No members registered in the library.")
+        else:
+            print(f"Members of {self.name}:")
+            for member in self.members:
+                print(member)
 
 # Application Example
 
@@ -118,3 +126,14 @@ library.register_member(member2)
 library.register_member(member3)
 library.register_member(member4)
 library.register_member(member5)
+
+#Display All Members and Books
+library.display_books()
+library.display_members()
+
+# Lend and return books
+library.lend_book("13456789", 1)
+library.display_books()
+library.return_book("55456789", 1)
+library.display_books()
+library.display_members()
