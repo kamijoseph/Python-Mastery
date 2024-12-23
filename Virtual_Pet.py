@@ -25,3 +25,18 @@ class VirtualPet:
             print(f"You played with {self.name}. Happiness increased. Energy and Hunger Levels adjusted.")
         else:
             print(f"{self.name} too tired to play. Let them rest.")
+            
+    def rest(self):
+        if self.energy < 100:
+            self.energy += 20
+            self.hunger += 5
+            print(f"{self.name} is resting. Energy Increased.")
+        else:
+            print(f"{self.name} is already full of energy.")
+            
+    def status(self):
+        print(f"\n------------{self.name}'s Status------------")
+        print(f"Hunger: {self.hunger}/100")
+        print(f"Energy: {self.energy}/100")
+        print(f"Happiness: {self.happiness}/100")
+        print("------------------------------------------------\n")
