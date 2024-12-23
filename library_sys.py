@@ -1,6 +1,5 @@
-
-# Library management sys
-print("This is The Fate's Algorithm Library")
+#-----Library Management System-----
+print("Welcome To The Fate Algorithm Library.\n")
 
 # Book Class
 class Book:
@@ -11,7 +10,7 @@ class Book:
         self.isbn = isbn
         
     def __str__(self):
-        return f"{self.title} by {self.author} ({self.genre}, ISBN{self.isbn})"
+        return f"{self.title} by {self.author} ({self.genre}, ISBN: {self.isbn})"
 
 # Member Class   
 class Member:
@@ -101,7 +100,7 @@ class Library:
 # Application Example
 
 #Library
-library = Library("Mcmillan Library Nairobi")
+library = Library("Fate Algorithm Library")
 
 #Adding Books To The Library
 book1 = Book("Sapiens: A Brief History Of Mankind", "Yuval Noah Harrari", "History", "13456789")
