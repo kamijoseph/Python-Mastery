@@ -12,6 +12,7 @@ class Table:
     def __init__(self, table_number):
         self.table_number = table_number
         self.orders = []
+        self.is_reserved = False
     
     def add_order(self, item):
         self.orders.append(item)
@@ -21,13 +22,17 @@ class Table:
     
     def clear_table(self):
         self.orders = []
+        self.is_reserved = False
+        
+    def reserve_table(self):
+        self.is_reserved = True
         
     def __str__(self):
         if not self.orders:
-            return f"{self.table_number} has no orders."
+            return f"Table {self.table_number} has no orders. Reserved: {self.is_reserved}"
         orders_summary = ', '.join(item.name for item in self.orders)
         total = self.calculate_total()
-        return f"Table {self.table_number}: Orders: {orders_summary} | Total: ${total:.2f}"
+        return f"Table {self.table_number}: Orders: {orders_summary} | Total: ${total:.2f} | Reserved: {self.is_reserved}"
     
 class Restaurant:
     def __init__(self, name):
