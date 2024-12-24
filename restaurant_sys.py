@@ -41,7 +41,7 @@ class Restaurant:
     def add_table(self, table):
         self.tables.append(table)
         
-    def show_item(self):
+    def show_menu(self):
         print(f"\n--- {self.name} Menu ---")
         for item in self.menu:
             print(item)
@@ -66,3 +66,35 @@ class Restaurant:
         
         table.add_order(item)
         print(f"Added {item_name} to Table {table_number}")
+        
+# Application Example
+if __name__ == "__main__":
+    # Create a restaurant
+    restaurant = Restaurant("Fate's Algorithm Restaurant")
+
+    # Add menu items
+    restaurant.add_menu_item(MenuItem("Burger", 8.99))
+    restaurant.add_menu_item(MenuItem("Pasta", 12.99))
+    restaurant.add_menu_item(MenuItem("Salad", 6.99))
+    restaurant.add_menu_item(MenuItem("Soda", 1.99))
+
+    # Add tables
+    restaurant.add_table(Table(1))
+    restaurant.add_table(Table(2))
+
+    # Display menu and tables
+    restaurant.show_menu()
+    restaurant.show_tables()
+
+    # Take orders
+    restaurant.take_order(1, "Burger")
+    restaurant.take_order(1, "Soda")
+    restaurant.take_order(2, "Pasta")
+
+    # Show tables after orders
+    restaurant.show_tables()
+
+    # Clear table
+    restaurant.tables[0].clear_table()
+    print("\nAfter clearing Table 1:")
+    restaurant.show_tables()
