@@ -1,5 +1,9 @@
 
 # Restaurant Management System
 class MenuItem:
-    def __init__(self):
-        pass
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+        
+    def __str__(self):
+        return f"{self.name} - ${self.price}"
