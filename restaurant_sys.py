@@ -39,6 +39,7 @@ class Restaurant:
         self.name = name
         self.menu = []
         self.tables = []
+        self.total_revenue = 0.00
         
     def add_menu_item(self, item):
         self.menu.append(item)
@@ -71,6 +72,37 @@ class Restaurant:
         
         table.add_order(item)
         print(f"Added {item_name} to Table {table_number}")
+        
+    def generate_bill(self, table_number):
+        table = next((t for t in self.tables if t.table_number == table_number), None)
+        if not table:
+            print(f"Table {table_number} not found.")
+            return
+        
+        total = table.calculate_total()
+        print(f"\n--- Bill for Table {table_number} ---")
+        for item in table.orders:
+            print(f"{item.name}: ${item.price:.2f}")
+        print(f"Total: ${total:.2f}\n")
+        self.total_revenue += total
+        table.clear_table()
+        
+    def reserve_table(self, table_number):
+        table = next((t for t in self.tables if t.table_number == table_number), None)
+        if not table:
+            print(f"Table {table_number} not found.")
+            return
+
+        if table.is_reserved:
+            print(f"Table {table_number} is already reserved.")
+        else:
+            table.reserve_table()
+            print(f"Table {table_number} has been reserved.")
+
+    def show_revenue(self):
+        print(f"\n--- Total Revenue ---")
+        print(f"Total Revenue: ${self.total_revenue:.2f}\n")
+        
         
 # Application Example
 if __name__ == "__main__":
