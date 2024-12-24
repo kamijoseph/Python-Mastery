@@ -107,7 +107,7 @@ class Restaurant:
 # Application Example
 if __name__ == "__main__":
     # Create a restaurant
-    restaurant = Restaurant("Fate's Algorithm Restaurant")
+    restaurant = Restaurant("Fate Algorithm Restaurant")
 
     # Add menu items
     restaurant.add_menu_item(MenuItem("Burger", 8.99))
@@ -131,7 +131,14 @@ if __name__ == "__main__":
     # Show tables after orders
     restaurant.show_tables()
 
-    # Clear table
-    restaurant.tables[0].clear_table()
-    print("\nAfter clearing Table 1:")
+    # Generate bill for Table 1
+    restaurant.generate_bill(1)
+
+    # Reserve a table
+    restaurant.reserve_table(2)
+
+    # Show tables after reservation
     restaurant.show_tables()
+
+    # Show total revenue
+    restaurant.show_revenue()
