@@ -9,7 +9,7 @@ class WeatherTracker:
         url = f"{self.base_url}weather?q={location}&appid={self.api_key}&units=metric"
         response = requests.get(url)
         if response.status_code == 200:
-            data = response.json
+            data = response.json()
             weather_info = {
                 'location': data['name'],
                 'temperature': data['main']['temp'],
@@ -25,7 +25,7 @@ class WeatherTracker:
         url = f"{self.base_url}forecast?q={location}&appid={self.api_key}&units=metric"
         response = requests.get(url)
         if response.status_code == 200:
-            data = response.json
+            data = response.json()
             forecasts = []
             for entry in data['list'][:5]:  # Fetching the next 5 time slots
                 forecast = {
@@ -50,10 +50,10 @@ class WeatherTracker:
             return None
         
 if __name__ == "__main__":
-    api_key = "your_openweather_api_key"  # Replace with your OpenWeather API key
+    api_key = "Replace here with your open weather API KEY"  
     tracker = WeatherTracker(api_key)
 
-    location = "Nairobi"
+    location = input("Enter Location Of your choice. Example (Moscow, London, Dubai, Nairobi): ")
 
     print("\n--- Current Weather ---")
     weather = tracker.fetch_weather(location)
