@@ -48,3 +48,39 @@ class WeatherTracker:
             return alerts if alerts else "No weather alerts."
         else:
             return None
+        
+if __name__ == "__main__":
+    api_key = "your_openweather_api_key"  # Replace with your OpenWeather API key
+    tracker = WeatherTracker(api_key)
+
+    location = "Nairobi"
+
+    print("\n--- Current Weather ---")
+    weather = tracker.fetch_weather(location)
+    if weather:
+        print(f"Location: {weather['location']}")
+        print(f"Temperature: {weather['temperature']} °C")
+        print(f"Description: {weather['description']}")
+        print(f"Humidity: {weather['humidity']}%")
+        print(f"Wind Speed: {weather['wind_speed']} m/s")
+    else:
+        print("Could not fetch weather data.")
+
+    print("\n--- Weather Forecast ---")
+    forecast = tracker.fetch_forecast(location)
+    if forecast:
+        for entry in forecast:
+            print(f"Date & Time: {entry['datetime']}, Temp: {entry['temperature']} °C, Desc: {entry['description']}")
+    else:
+        print("Could not fetch forecast data.")
+
+    print("\n--- Weather Alerts ---")
+    alerts = tracker.fetch_alerts(location)
+    if alerts:
+        if isinstance(alerts, str):
+            print(alerts)
+        else:
+            for alert in alerts:
+                print(f"Alert: {alert['event']} - {alert['description']}")
+    else:
+        print("Could not fetch alert data.")
