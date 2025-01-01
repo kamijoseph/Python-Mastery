@@ -11,4 +11,13 @@ def load_tasks():
             return json.load
     except FileNotFoundError:
         return []
-    
+
+def save_tasks(tasks):
+    with open(FILE_NAME, "w") as file:
+        json.dump(tasks, file)
+        
+def display_tasks(tasks):
+    if not tasks:
+        print("No Tasks Available!")
+    else:
+        print("\nTo-Do List:")
