@@ -29,3 +29,15 @@ def add_tasks(tasks):
     title = input("Enter the title of the task: ")
     tasks.append({"title": title, "completed": False})
     print("Tasks Added Successfully!")
+    
+def mark_tasks_done(tasks):
+    display_tasks(tasks)
+    try:
+        task_number = int(input("Enter The Task Number to be Marked: "))
+        if 1 <= task_number <= len(tasks):
+            tasks = [task_number - 1]["completed"] = True
+            print("Tasks Marked as Done!")
+        else:
+            print("Invalid Task")
+    except ValueError:
+        print("Please Enter a Valid Task Number!")
