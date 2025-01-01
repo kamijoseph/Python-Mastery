@@ -22,8 +22,8 @@ def display_tasks(tasks):
     else:
         print("\nTo-Do List:")
         for idx, task in enumerate(tasks, 1):
-            status = "Done" if tasks["completed"] else "Pending"
-            print(f"{idx}. {tasks['title']} [{status}]")
+            status = "Done" if task["completed"] else "Pending"
+            print(f"{idx}. {task['title']} [{status}]")
 
 def add_tasks(tasks):
     title = input("Enter the title of the task: ")
@@ -35,7 +35,7 @@ def mark_tasks_done(tasks):
     try:
         task_number = int(input("Enter The Task Number to be Marked: "))
         if 1 <= task_number <= len(tasks):
-            tasks = [task_number - 1]["completed"] = True
+            tasks[task_number - 1]["completed"] = True
             print("Tasks Marked as Done!")
         else:
             print("Invalid Task ")
@@ -47,7 +47,7 @@ def delete_tasks(tasks):
     try:
         task_number = int(input("Enter The Task Number to be Deleted: "))
         if 1 <= task_number <= len(tasks):
-            tasks.pop[task_number - 1]
+            tasks.pop(task_number - 1)
             print("Task deleted Successfully.")
         else:
             print("Invalid Task!")
