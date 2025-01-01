@@ -21,3 +21,11 @@ def display_tasks(tasks):
         print("No Tasks Available!")
     else:
         print("\nTo-Do List:")
+        for idx, task in enumerate(tasks, 1):
+            status = "Done" if tasks["completed"] else "Pending"
+            print(f"{idx}. {tasks['title']} [{status}]")
+
+def add_tasks(tasks):
+    title = input("Enter the title of the task: ")
+    tasks.append({"title": title, "completed": False})
+    print("Tasks Added Successfully!")
