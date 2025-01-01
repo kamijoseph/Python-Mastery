@@ -38,6 +38,18 @@ def mark_tasks_done(tasks):
             tasks = [task_number - 1]["completed"] = True
             print("Tasks Marked as Done!")
         else:
-            print("Invalid Task")
+            print("Invalid Task ")
     except ValueError:
         print("Please Enter a Valid Task Number!")
+
+def delete_tasks(tasks):
+    display_tasks(tasks)
+    try:
+        task_number = int(input("Enter The Task Number to be Deleted: "))
+        if 1 <= task_number <= len(tasks):
+            tasks.pop[task_number - 1]
+            print("Task deleted Successfully.")
+        else:
+            print("Invalid Task!")
+    except ValueError:
+        print('Enter a Valid Task Number!')
