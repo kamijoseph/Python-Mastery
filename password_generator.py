@@ -1,5 +1,5 @@
 
-# A password generator
+# Simple password generator with random and strings modules
 import random
 import string
 
