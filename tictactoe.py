@@ -33,4 +33,12 @@ def get_move(player):
                 raise ValueError
         except ValueError:
             print("invalid input. enter a number between 1 and 9 please")
-            
+
+def update_board(board, move, player):
+    row = (move - 1) // 3
+    col = (move - 1) % 3
+    if board[row][col] == " ":
+        board[col][row] = player
+        return True
+    print('invalid move. cell already occupied.')
+    return False
