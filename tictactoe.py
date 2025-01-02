@@ -28,9 +28,10 @@ def check_winner(board):
 def get_move(player):
     while True:
         try:
-            move = int(input(f"Player {player} enteryour move (1-9): "))
+            move = int(input(f"Player {player} enter your move (1-9): "))
             if move < 1 or move > 9:
                 raise ValueError
+            return move
         except ValueError:
             print("invalid input. enter a number between 1 and 9 please")
 
@@ -38,7 +39,7 @@ def update_board(board, move, player):
     row = (move - 1) // 3
     col = (move - 1) % 3
     if board[row][col] == " ":
-        board[col][row] = player
+        board[row][col] = player
         return True
     print('invalid move. cell already occupied.')
     return False
@@ -71,7 +72,7 @@ def main():
                     print(f"player {winner} wins.")
                 break
             #switch players
-            current_player = "0" if current_player == "X" else "X"
+            current_player = "O" if current_player == "X" else "X"
     
 if __name__ == "__main__":
     main()
