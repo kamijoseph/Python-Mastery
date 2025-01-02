@@ -24,3 +24,13 @@ def check_winner(board):
         return "Tie"
     
     return None
+
+def get_move(player):
+    while True:
+        try:
+            move = int(input(f"Player {player} enteryour move (1-9): "))
+            if move < 1 or move > 9:
+                raise ValueError
+        except ValueError:
+            print("invalid input. enter a number between 1 and 9 please")
+            
