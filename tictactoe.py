@@ -42,3 +42,36 @@ def update_board(board, move, player):
         return True
     print('invalid move. cell already occupied.')
     return False
+
+def main():
+    board = [[" " for _ in range(3)] for _ in range(3)]
+    
+    print("Welcome to Tic-Tac-Toe!")
+    print("Player X and Player O will take turns.")
+    print("Enter a number between 1 and 9 to place your mark.")
+    print("The positions are as follows:")
+    print("1 | 2 | 3")
+    print("-" * 5)
+    print("4 | 5 | 6")
+    print("-" * 5)
+    print("7 | 8 | 9")
+    
+    #start the game loop
+    current_player = "X"
+    while True:
+        print_board(board)
+        move = get_move(current_player)
+        if update_board(board, move, current_player):
+            winner = check_winner(board)
+            if winner:
+                print_board(board)
+                if winner == "Tie":
+                    print("its a tie.")
+                else:
+                    print(f"player {winner} wins.")
+                break
+            #switch players
+            current_player = "0" if current_player == "X" else "X"
+    
+if __name__ == "__main__":
+    main()
